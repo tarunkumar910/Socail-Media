@@ -1,0 +1,128 @@
+.sidebar-container {
+  width: 250px;
+  min-width: 220px;
+  height: 100vh;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.85, 0, 0.15, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 2px 0 12px 0 rgba(80, 80, 180, 0.06);
+}
+
+/* Slide in/out effect for mobile/closed states */
+.sidebar-open {
+  transform: translateX(0);
+}
+.sidebar-closed {
+  transform: translateX(-100%);
+}
+
+/* Close button in top-right */
+.sidebar-close-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #7e7e7e;
+  cursor: pointer;
+  align-self: flex-end;
+  margin: 12px 14px 0 0;
+  transition: color 0.2s;
+}
+.sidebar-close-btn:hover { 
+  color: #4338ca; 
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 16px;
+  flex: 1;
+}
+
+/* Logo */
+.sidebar-content img {
+  height: 34px;
+  margin: 0 0 18px 10px;
+  cursor: pointer;
+}
+
+.sidebar-content hr {
+  margin: 10px 0 18px 0;
+  border: none;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* Create Post Button */
+.sidebar-content a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+  padding: 13px 0;
+  background: linear-gradient(90deg, #5f3dc4 40%, #7c3aed 100%);
+  color: white;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 10px 0 rgba(124, 58, 237, 0.09);
+  transition: background 0.2s, box-shadow 0.2s;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.sidebar-content a:hover {
+  background: linear-gradient(90deg, #765ed6 40%, #a78bfa 100%);
+  box-shadow: 0 4px 20px 0 rgba(124, 58, 237, 0.18);
+}
+
+.sidebar-content a svg {
+  width: 22px;
+  height: 22px;
+  margin-right: 3px;
+  stroke-width: 2.6;
+}
+
+/* User Button Container */
+.user_button {
+  padding: 20px 16px;
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f9fafb;
+}
+
+/* User details text */
+.user_deatils h1 {
+  font-size: 1rem;
+  margin: 0;
+  color: #374151;
+  font-weight: 600;
+}
+.user_deatils p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Logout icon style */
+svg.log-out-icon {
+  cursor: pointer;
+  color: #7e7e7e;
+  width: 24px;
+  height: 24px;
+  margin: 16px;
+  transition: color 0.3s;
+}
+svg.log-out-icon:hover {
+  color: #4338ca;
+}

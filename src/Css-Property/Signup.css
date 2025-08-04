@@ -1,0 +1,86 @@
+.login_page {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(104deg, #dbeafe 0%, #f8fafc 100%);
+}
+
+.left_side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 7vw;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 2rem;
+}
+
+.user_and_rating {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.user_group {
+  width: 90px;
+  height: 90px;
+}
+
+.star_section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.rating {
+  width: 130px;
+  margin-bottom: 0.4rem;
+}
+
+.used_by {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.left_side_title {
+  font-size: 2.75rem;
+  font-weight: bold;
+  margin: 1.2rem 0 1rem 0;
+  color: #222;
+  max-width: 430px;
+  line-height: 1.2;
+}
+
+.left_side_subtitle {
+  color: #6366f1;
+  font-size: 1.25rem;
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.right_side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.80);
+  min-width: 400px;
+  box-shadow: -16px 0 32px -16px #dbeafe;
+}
+
+@media (max-width: 900px) {
+  .login_page {
+    flex-direction: column;
+  }
+  .left_side, .right_side {
+    align-items: center;
+    justify-content: flex-start;
+    min-width: unset;
+    padding: 3vh 3vw;
+  }
+}

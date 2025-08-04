@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    
+}
+
+
+
+.rightside {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: #f9fafb; /* light background */
+  overflow-x: hidden;
+}
+
+/* Sidebar will be fixed or positioned as per its own CSS,
+   so not styled here - just the container alignment */
+
+/* Right side content area */
+.right_side_containt {
+  flex-grow: 1;
+  padding: 24px 32px;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: inset 0 0 15px rgb(0 0 0 / 0.05);
+  min-height: 100vh;
+  transition: margin-left 0.3s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* When sidebar is open, push content to the right */
+.rightside .right_side_containt {
+  margin-left: 250px; /* Width of your Sidebar */
+}
+
+/* Hamburger menu icon */
+.menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 28px;
+  height: 28px;
+  color: #4338ca; 
+  cursor: pointer;
+  z-index: 110; /* Above sidebar & content */
+  transition: transform 0.3s ease;
+}
+
+/* Cross icon */
+.cross {
+  position: fixed;
+  top: 20px;
+  left: 280px; /* Just outside sidebar */
+  width: 28px;
+  height: 28px;
+  color: #4338ca;
+  cursor: pointer;
+  z-index: 110;
+  transition: transform 0.3s ease;
+}
+
+/* Optionally, add hover effects */
+.menu:hover,
+.cross:hover {
+  color: #7c3aed;
+  transform: scale(1.1);
+}
+
+/* Responsive considerations */
+@media (max-width: 768px) {
+  .rightside .right_side_containt {
+    margin-left: 0;
+  }
+  /* Sidebar should overlay content on mobile - manage in Sidebar CSS */
+  .menu {
+    left: 15px;
+  }
+  .cross {
+    left: 220px;
+  }
+}
