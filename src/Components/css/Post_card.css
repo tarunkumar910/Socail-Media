@@ -1,0 +1,194 @@
+.Post_card {
+  background: linear-gradient(145deg, #ffffff, #f0f2f8);
+  border-radius: 18px;
+  box-shadow:
+    4px 4px 15px rgba(0, 0, 0, 0.06),
+    -4px -4px 15px rgba(255, 255, 255, 0.8);
+  padding: 1.8rem 2rem;
+  margin-bottom: 2rem;
+  max-width: 620px;
+  color: #222;
+  font-family: "Inter", Arial, sans-serif;
+  user-select: text;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+.Post_card:hover {
+  box-shadow:
+    6px 6px 22px rgba(0, 0, 0, 0.1),
+    -6px -6px 22px rgba(255, 255, 255, 0.9);
+  transform: translateY(-4px);
+}
+
+/* User section */
+.post_user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.post_user img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #5a74ef;
+  box-shadow:
+    0 0 10px rgba(90, 116, 239, 0.5),
+    inset 0 0 5px rgba(255, 255, 255, 0.7);
+  transition: transform 0.25s ease;
+}
+
+.post_user img:hover {
+  transform: scale(1.1);
+}
+
+.post_user_details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  text-shadow: 0 0 3px rgba(77, 98, 239, 0.3);
+}
+
+.verified_icon {
+  color: #5a74ef;
+  filter: drop-shadow(0 0 1.5px rgba(90, 116, 239, 0.8));
+  vertical-align: middle;
+}
+
+.username {
+  margin-left: auto;
+  font-size: 0.9rem;
+  color: #8a8a8a;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+
+/* Post content */
+.post_content {
+  font-size: 1.12rem;
+  line-height: 1.6;
+  margin-bottom: 1.3rem;
+  color: #333;
+  word-break: break-word;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.post_content:hover {
+  color: #5a74ef;
+  cursor: text;
+}
+
+.hashtag {
+  color: #5a74ef;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.hashtag:hover {
+  color: #3a50cb;
+  text-decoration: underline;
+}
+
+/* Post media images */
+.post_media {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.post_media_image {
+  max-width: 48%;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow:
+    0 6px 20px rgba(90, 116, 239, 0.25),
+    inset 0 0 5px rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post_media_image:hover {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow:
+    0 12px 28px rgba(90, 116, 239, 0.45),
+    inset 0 0 7px rgba(255, 255, 255, 1);
+}
+
+/* Interaction buttons */
+.post_actions {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  border-top: 1px solid #e6e9f0;
+  padding-top: 0.9rem;
+}
+
+.post_action_btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  color: #5a74ef;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.post_action_btn:hover {
+  background-color: #5a74ef;
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(90, 116, 239, 0.65);
+}
+
+.post_action_btn svg {
+  stroke-width: 2;
+}
+
+.post_action_btn span {
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .Post_card {
+    padding: 1.2rem 1.2rem;
+    max-width: 100%;
+  }
+
+  .post_user img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .post_user_details {
+    font-size: 1rem;
+  }
+
+  .post_content {
+    font-size: 1rem;
+  }
+
+  .post_media_image {
+    max-width: 100%;
+    border-radius: 14px;
+  }
+
+  .post_actions {
+    gap: 20px;
+  }
+}

@@ -10,24 +10,28 @@ import CreatePost from "./Pages/CreatePost";
 import { useUser } from "@clerk/clerk-react";
 import Layou_linkup from "./Pages/Layou_linkup";
 
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   const { user } = useUser();
 
   return (
-    <Routes>
-      <Route path="/" element={!user ? <Signup /> : <Layou_linkup />}>
-        <Route index element={<Feed />} />
-        <Route path="feed" element={<Feed />} />
-        <Route path="message" element={<Message />} />
-        <Route path="message/:userId" element={<ChatBox />} />
-        <Route path="connection" element={<Connection />} />
-        <Route path="discover" element={<Discover />} />
-        <Route path="profile" element={<Profile />} />
-        <Route path="profile/:profileId" element={<Profile />} />
-        <Route path="create-post" element={<CreatePost />} />
-      </Route>
-    </Routes>
+    <>
+      <Toaster />
+      <Routes>
+        <Route path="/" element={!user ? <Signup /> : <Layou_linkup />}>
+          <Route index element={<Feed />} />
+          <Route path="feed" element={<Feed />} />
+          <Route path="message" element={<Message />} />
+          <Route path="message/:userId" element={<ChatBox />} />
+          <Route path="connection" element={<Connection />} />
+          <Route path="discover" element={<Discover />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="profile/:profileId" element={<Profile />} />
+          <Route path="create-post" element={<CreatePost />} />
+        </Route>
+      </Routes>
+    </>
   );
 };
 

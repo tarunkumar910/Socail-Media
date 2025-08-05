@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { dummyPostsData } from "../assets/assets";
+import { assets, dummyPostsData } from "../assets/assets";
 import Loading from "../Components/Loading";
 import Stories from "../Components/Stories";
+import Post_card from "../Components/Post_card";
+
+import "../Css-Property/Feed.css";
 
 const Feed = () => {
   const [feeds, setFeeds] = useState([]);
@@ -22,14 +25,34 @@ const Feed = () => {
       <div className="stories_post">
         <Stories />
 
-        <div className="list_of_post">List of post</div>
+        <div className="list_of_post">
+          {
+            feeds.map((post) => (
+              <Post_card key={post._id} post={post} />))
+          }
+    
+        </div>
       </div>
 
       {/* right side section */}
       <div className="right_side">
-        <div className="sponserd">
-          <h1 className="sponsered_message">sponsered</h1>
-        </div>
+      <div className="sponsored">
+  <h3 className="sponsored_title">Sponsored</h3>
+  <div className="sponsored_content">
+    <img
+      src={assets.sponsored_img}
+      alt="Easy email marketing platform"
+      className="sponsored_img"
+    />
+    <div className="sponsored_texts">
+      <p className="sponsored_headline">Email Marketing</p>
+      <p className="sponsored_desc">
+        Supercharge your marketing with a powerful, easy-to-use platform built for results.
+      </p>
+      <button className="sponsored_btn">Learn More</button>
+    </div>
+  </div>
+</div>
 
         <div className="recent">
           <h1>recent</h1>
