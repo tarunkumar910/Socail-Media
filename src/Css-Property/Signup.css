@@ -1,86 +1,262 @@
+/* ------------- Layout & Base ------------- */
 .login_page {
   display: flex;
   min-height: 100vh;
   background: linear-gradient(104deg, #dbeafe 0%, #f8fafc 100%);
+  font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+  overflow-x: hidden;
 }
 
+/* ------------- Left Side (branding/content) ------------- */
 .left_side {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 7vw;
+  padding: 0 8vw 0 7vw;
 }
 
 .logo {
-  width: 120px;
-  margin-bottom: 2rem;
+  width: 128px;
+  margin-bottom: 2.6rem;
+  opacity: 0;
+  animation: fadePop 0.7s 0.05s cubic-bezier(0.62, .08, .76, .51) forwards;
+  align-self: flex-start;
+  margin-left: 0;
 }
 
 .user_and_rating {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  margin-bottom: 2rem;
+  gap: 1.35rem;
+  margin-bottom: 2.2rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.28s cubic-bezier(.38, 1.08, .4, .98) forwards;
 }
 
 .user_group {
-  width: 90px;
-  height: 90px;
+  width: 92px;
+  height: 92px;
 }
 
 .star_section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 0.16rem;
 }
 
 .rating {
-  width: 130px;
-  margin-bottom: 0.4rem;
+  width: 144px;
+  margin-bottom: 0.38rem;
 }
 
 .used_by {
   font-size: 1rem;
-  color: #333;
-  margin: 0;
+  color: #3f4152;
+  margin: 0 0 0 0.12rem;
+  letter-spacing: 0.02em;
 }
 
 .left_side_title {
-  font-size: 2.75rem;
-  font-weight: bold;
-  margin: 1.2rem 0 1rem 0;
-  color: #222;
-  max-width: 430px;
-  line-height: 1.2;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin: 1.3rem 0 1.1rem 0;
+  color: #21223d;
+  line-height: 1.18;
+  letter-spacing: -0.012em;
+
+  /* Typewriter setup */
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #21223d;
+  width: 40ch; /* 👈 Adjust based on your full text */
+  animation: typing 5s steps(40, end) infinite, blink 0.7s step-end infinite;
 }
 
 .left_side_subtitle {
   color: #6366f1;
-  font-size: 1.25rem;
+  font-size: 1.22rem;
   max-width: 400px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.62rem;
+  opacity: 0;
+  animation: fadeUp 0.75s 0.68s cubic-bezier(.38, 1.08, .4, .98) forwards;
+  font-weight: 500;
 }
 
+/* ------------- Right Side (Sign-in form, card) ------------- */
 .right_side {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.80);
-  min-width: 400px;
-  box-shadow: -16px 0 32px -16px #dbeafe;
+  max-width: 520px;
+  width: 100%;
+  will-change: opacity, transform;
+  box-sizing: border-box;
+  padding: 2.4rem 2.5rem;
+  border-radius: 20px;
+  min-height: 80vh;
+  height: fit-content;
+  position: relative;
+}
+
+/* Clerk SignIn box styling */
+.singin,
+.cl-user-sign-in,
+.cl-card {
+  max-width: 420px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 auto !important;
+  box-sizing: border-box;
+  border-radius: 17px;
+  box-shadow: 0 4px 32px rgba(80, 146, 252, 0.09);
+  background-color: #ffffff !important;
+}
+
+/* Hide development footer */
+.clerk-footer,
+.clerk-powered-by,
+.clerk-dev-badge,
+.cl-powered-by {
+  display: none !important;
+}
+
+/* Animate SignIn card content */
+.right_side > * {
+  opacity: 0;
+  animation: fadeUp 0.72s 1.19s ease forwards;
+}
+
+/* ------------- Animations ------------- */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(42px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadePop {
+  0% {
+    opacity: 0;
+    transform: scale(0.86);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes cardInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(70px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* New: Typewriter animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #21223d;
+  }
+}
+
+/* ------------- Responsive ------------- */
+@media (max-width: 1120px) {
+  .left_side {
+    padding: 0 4vw;
+  }
 }
 
 @media (max-width: 900px) {
   .login_page {
     flex-direction: column;
   }
-  .left_side, .right_side {
+
+  .left_side,
+  .right_side {
     align-items: center;
     justify-content: flex-start;
-    min-width: unset;
     padding: 3vh 3vw;
+    width: 100%;
+  }
+
+  .left_side {
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 5vh;
+    padding-bottom: 1.6vh;
+  }
+
+  .logo {
+    margin-left: 0;
+    align-self: flex-start;
+  }
+
+  .user_group,
+  .rating {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .right_side {
+    box-shadow: none;
+    padding: 2rem 1rem;
+    justify-content: center;
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .left_side_title {
+    font-size: 2rem;
+    max-width: 100%;
+    animation: typing 5s steps(30, end) infinite, blink 0.7s step-end infinite;
+  }
+
+  .star_section .rating {
+    width: 110px;
+  }
+
+  .logo {
+    width: 96px;
+  }
+
+  .user_group {
+    width: 52px;
+    height: 52px;
+  }
+
+  .right_side {
+    padding: 2rem 0.8rem;
   }
 }

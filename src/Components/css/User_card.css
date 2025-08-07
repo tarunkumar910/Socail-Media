@@ -1,0 +1,323 @@
+.user-card {
+  width: 320px;
+  background: #fff;
+  border-radius: 17px;
+  box-shadow: 0 4px 18px rgba(95, 91, 252, 0.12);
+  padding: 1.5rem 1.35rem 1.12rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.18s, transform 0.16s;
+  position: relative;
+  gap: 0.6rem;
+}
+
+.user-card:hover {
+  box-shadow: 0 10px 32px rgba(99, 91, 252, 0.17);
+  transform: translateY(-3px) scale(1.012);
+}
+
+/* Avatar row */
+.profile_picture {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f7f7fd;
+  box-shadow: 0 3px 14px rgba(99,91,252, 0.12);
+  border: 2px solid #f3f4fd;
+  margin-bottom: 0.16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Info stack */
+.user_info {
+  margin-top: 0.18rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.17rem;
+}
+.user_name {
+  font-size: 1.11rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #27275b;
+  margin: 0 0 2px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.username {
+  font-size: 0.97rem;
+  color: #7e86ae;
+  margin: 0 0 3px 0;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.user_bio {
+  font-size: 0.93rem;
+  color: #565577;
+  line-height: 1.36;
+  opacity: 0.92;
+  margin: 0 0 1px 0;
+  max-height: 2.7em;
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Location + Followers Row */
+.follower_loaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.98rem;
+  margin: 2px 0 4px 0;
+  width: 100%;
+}
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.34rem;
+  color: #78799d;
+  font-weight: 500;
+}
+.location_icon {
+  width: 17px;
+  height: 17px;
+  color: #635bfc;
+  flex-shrink: 0;
+}
+.followers {
+  display: flex;
+  align-items: center;
+  gap: 0.32rem;
+  color: #573ecc;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+.followers .length {
+  color: #26247a;
+  font-weight: 700;
+  font-size: 1.03em;
+  min-width: 16px;
+  text-align: right;
+}
+
+/* Action buttons row */
+.follow {
+  display: flex;
+  width: 100%;
+  gap: 0.68rem;
+  margin-top: 0.88rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+.follow_button {
+  background: linear-gradient(93deg, #645ffc 45%, #938af8 98%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.02rem;
+  border: none;
+  border-radius: 9px;
+  padding: 0.5rem 1.25rem;
+  transition: background 0.16s, color 0.14s;
+  display: flex;
+  align-items: center;
+  gap: 0.53rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(102, 91, 252, 0.10);
+}
+.following {
+  background: #dadffb !important;
+  color: #4b4786 !important;
+  font-weight: 700;
+}
+
+.follow_button:disabled,
+.follow_button[aria-disabled="true"] {
+  opacity: 0.65;
+  background: #e4e9fa;
+  color: #949bcc;
+  cursor: default;
+}
+
+.follow_icon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.2px;
+  color: inherit;
+}
+.message {
+  background: #f2f5fe;
+  color: #635bfc;
+  font-weight: 600;
+  font-size: 1.02rem;
+  border: none;
+  border-radius: 9px;
+  padding: 0.5rem 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.42rem;
+  cursor: pointer;
+  box-shadow: 0 1px 7px rgba(102, 91, 252, 0.07);
+  margin-top: 0;
+  transition: background 0.14s, color 0.14s;
+}
+.message:hover {
+  background: #e7ecfa;
+  color: #2b279b;
+}
+.message_icon {
+  width: 19px;
+  height: 19px;
+  stroke-width: 2.1px;
+}
+
+/* --------- DISCOVER PAGE/SECTION ----------- */
+.discover {
+  min-height: 100vh;
+  padding: 2rem 0;
+  background: #f6f8fc;
+  display: flex;
+  justify-content: center;
+}
+.discover_content {
+  width: 100%;
+  max-width: 1230px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(80, 90, 180, 0.12);
+  padding: 2.1rem 2.3rem 1rem 2.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Section title and description */
+.title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.title h2 {
+  font-size: 2.2rem;
+  color: #413fd2;
+  font-weight: 800;
+  margin-bottom: 0.10rem;
+  letter-spacing: -0.04rem;
+}
+.title .message {
+  color: #8184a6;
+  font-size: 1.08rem;
+  margin: 0;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  margin-bottom: 1.9rem;
+  display: flex;
+  justify-content: center;
+}
+.search_content {
+  width: 100%;
+  max-width: 430px;
+}
+.search_icon_input {
+  background: #f5f7fd;
+  border-radius: 12px;
+  border: 1.4px solid #ecebfa;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 1rem 0.3rem 0.8rem;
+  gap: 0.7rem;
+  box-shadow: 0 1px 4px rgba(99,91,252, 0.05);
+}
+.lucide-search-icon {
+  color: #635bfc;
+  width: 1.5em;
+  height: 1.5em;
+}
+.peoplesearch {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1.05rem;
+  color: #2e3175;
+  width: 100%;
+  font-family: inherit;
+  padding: 0.2rem 0;
+}
+.peoplesearch::placeholder {
+  color: #b3b8c9;
+  font-size: 0.95rem;
+}
+
+/* Utility messages */
+.loading {
+  font-size: 1.25rem;
+  color: #635bfc;
+  margin: 2.5rem auto;
+  text-align: center;
+}
+.no-users {
+  font-size: 1.05rem;
+  color: #bdbdc0;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 1200px) {
+  .discover_content {
+    max-width: 970px;
+    padding: 1.6rem 0.9rem 1rem 0.9rem;
+  }
+  .user_card_component {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.06rem;
+  }
+  .user-card {
+    width: 260px;
+    padding: 1.2rem 1rem 0.9rem 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .discover_content {
+    max-width: 98vw;
+    padding: 1.1rem 0.2rem 0.8rem 0.2rem;
+  }
+  .user_card_component {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .user-card {
+    width: 97%;
+    max-width: 100vw;
+    padding: 0.98rem 0.45rem 0.7rem 0.45rem;
+  }
+  .profile_picture,
+  .profile_image {
+    width: 43px;
+    height: 43px;
+  }
+  .user_info .user_name {
+    font-size: 0.98rem;
+  }
+}
+

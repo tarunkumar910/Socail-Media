@@ -41,8 +41,10 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin-top: 16px;
+ 
   flex: 1;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Logo */
@@ -125,4 +127,15 @@ svg.log-out-icon {
 }
 svg.log-out-icon:hover {
   color: #4338ca;
+}
+
+
+/* logo */
+.logo {
+  display: block;
+  width: 220px !important;
+  height: 100px !important;
+  margin: 1.5rem auto 1.2rem auto; /* centers with vertical spacing */
+  cursor: pointer;
+  object-fit: contain;
 }

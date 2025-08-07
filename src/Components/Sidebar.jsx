@@ -5,6 +5,7 @@ import Menu_items from "./Menu_items";
 import { CirclePlus, LogOut } from "lucide-react";
 import "./css/Sidebar.css";
 import { UserButton, useClerk } from "@clerk/clerk-react";
+import logo from "../assets/lofo.png"
 
 const Sidebar = ({ Open, setOpen }) => {
   const navigate = useNavigate();
@@ -27,12 +28,12 @@ const { signOut } = useClerk();
       </button>
       <div className="sidebar-content">
         <img
-          src={assets.logo}
-          alt="pingup logo"
-          onClick={() => navigate("/")}
+          src={logo}
+          alt="LinkUp logo"
+          onClick={() => navigate("/")} className="logo"
         />
 
-        <hr />
+        
 
         <Menu_items setOpen={setOpen} />
 

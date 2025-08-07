@@ -1,0 +1,104 @@
+/* Discover Page Container */
+.discover {
+  min-height: 100vh;
+  padding: 2.6rem 0;
+  background: #f6f8fc;
+  display: flex;
+  justify-content: center;
+}
+
+.discover_content {
+  width: 100%;
+  max-width: 580px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 36px rgba(80, 90, 180, 0.10);
+  padding: 2.3rem 2.3rem 1rem 2.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+.title h2 {
+  font-size: 2rem;
+  color: #413fd2;
+  font-weight: bold;
+  margin-bottom: 0.15rem;
+}
+.title .message {
+  color: #8184a6;
+  font-size: 1.08rem;
+  margin: 0;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  margin-bottom: 2.3rem;
+  display: flex;
+  justify-content: center;
+}
+.search_content {
+  width: 100%;
+  max-width: 410px;
+}
+.search_icon_input {
+  background: #f7f7fd;
+  border-radius: 12px;
+  border: 1.5px solid #ecebfa;
+  display: flex;
+  align-items: center;
+  padding: 0.32rem 1rem 0.32rem 0.8rem;
+  gap: 0.7rem;
+  box-shadow: 0 1px 4px rgba(99,91,252, 0.05);
+}
+
+.lucide-search-icon {
+  color: #635bfc;
+  width: 1.52em;
+  height: 1.52em;
+}
+
+.peoplesearch {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1.05rem;
+  color: #2e3175;
+  width: 100%;
+  font-family: inherit;
+  padding: 0.25rem 0;
+}
+
+.peoplesearch::placeholder {
+  color: #b3b8c9;
+  font-size: 0.96rem;
+}
+
+/* User Card Grid/Stack */
+
+.user_card_component {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(326px, 1fr));
+  gap: 1.4rem;
+  width: 100%;
+  margin-top: 2.2rem;
+  justify-items: center;
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: #635bfc;
+  margin: 2.5rem auto;
+  text-align: center;
+}
+.no-users {
+  font-size: 1.08rem;
+  color: #ababbc;
+  text-align: center;
+  margin: 3rem 0;
+}

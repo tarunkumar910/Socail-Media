@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/log.png";
+import logo from "../assets/lofo.png";
 import user_group from "../assets/user_group.png"
 import star from "../assets/rating.png"
 import { SignIn} from '@clerk/clerk-react';
@@ -18,19 +18,19 @@ const Signup = () => {
           <img src={user_group} alt="users" className="user_group" />
           <div className="star_section">
             <img src={star} alt="rating stars" className="rating" />
-            <p className="used_by">Used by 12k+ developers</p>
+            <p className="used_by">Rated 5/5 by 12k+ developers</p>
           </div>
         </div>
 
-        <h1 className="left_side_title">More than just friends truly connect</h1>
+        <h1 className="left_side_title typing">Connect beyond code. Truly grow.</h1>
         <p className="left_side_subtitle">
-          connect with global community on LinkUp
+          Join the global developer community →
         </p>
       </div>
 
       {/* Right side login form */}
       <div className="right_side">
-       <SignIn />
+       <SignIn className="singin" />
       </div>
     </div>
   );
