@@ -5,6 +5,7 @@ import React from "react";
 
 import "./css/Post_card.css";
 import { dummyUserData } from "../assets/assets";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -29,11 +30,13 @@ const currentUser= dummyUserData;
 
     }
 
+    const navigate = useNavigate();  
+
 
   return (
     <div className="Post_card">
       {/* user details */}
-      <div className="post_user">
+      <div className="post_user" onClick={() => navigate(`/profile/${post.user._id}`)}>
         <img src={post.user.profile_picture} alt={`${post.user.full_name} profile`} />
         <div className="post_user_details">
           <p className="post_user_name">{post.user.full_name}</p>

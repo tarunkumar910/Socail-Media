@@ -12,7 +12,7 @@ import "../Css-Property/Layou_linkup.css"
 const Layou_linkup = () => {
 
  const user = dummyUserData;   
-const [Open, setOpen] = useState(false);
+const [Open, setOpen] = useState(true);
 
   return  user? (
     

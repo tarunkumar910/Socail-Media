@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Signup from "./Pages/Signup";
 import Feed from "./Pages/Feed";
-import Message from "./Pages/Message";
+import Message from "./Pages/Messages";
 import ChatBox from "./Pages/ChatBox";
-import Connection from "./Pages/Connection";
+import Connections from "./Pages/Connections";
 import Discover from "./Pages/Discorver";
 import Profile from "./Pages/Profile";
 import CreatePost from "./Pages/CreatePost";
@@ -22,9 +22,9 @@ const App = () => {
         <Route path="/" element={!user ? <Signup /> : <Layou_linkup />}>
           <Route index element={<Feed />} />
           <Route path="feed" element={<Feed />} />
-          <Route path="message" element={<Message />} />
+          <Route path="messages" element={<Message />} />
           <Route path="message/:userId" element={<ChatBox />} />
-          <Route path="connection" element={<Connection />} />
+          <Route path="connections" element={<Connections />} />
           <Route path="discover" element={<Discover />} />
           <Route path="profile" element={<Profile />} />
           <Route path="profile/:profileId" element={<Profile />} />

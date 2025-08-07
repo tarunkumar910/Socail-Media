@@ -1,0 +1,163 @@
+.message_content {
+  padding: 0  0 0 20px  ;
+  background: #f6f8fc;
+  
+}
+
+
+h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #413fd2;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.04em;
+}
+.suggestion {
+  font-size: 1.08rem;
+  color: #6c6b8a;
+  margin-bottom: 1.4rem;
+  font-weight: 500;
+}
+
+/* List of connected users */
+.connected_users {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.1rem;
+  max-width: 500px;
+}
+
+/* Single connected user card */
+.connected_user {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  padding: 1.3rem 1.4rem;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(99, 91, 252, 0.07);
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+
+.connected_user:hover {
+  box-shadow: 0 10px 30px rgba(99,91,252, 0.13);
+  transform: translateY(-2px) scale(1.015);
+}
+
+/* Profile avatar styles */
+.connected_user .profile_picture {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(99,91,252,0.11);
+  border: 2.5px solid #f2f3fd;
+  flex-shrink: 0;
+}
+
+/* User info block */
+.connected_user .name {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Full name */
+.connected_user .full_name {
+  font-size: 1.19rem;
+  font-weight: 700;
+  color: #292970;
+  margin-bottom: 0.2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Username styling */
+.connected_user .username {
+  font-size: 0.98rem;
+  color: #8785a3;
+  margin-bottom: 0.33rem;
+  font-weight: 500;
+  letter-spacing: 0.012em;
+  width:354px
+}
+
+/* Bio text - limit to 2 lines */
+.connected_user .bio {
+  font-size: 0.98rem;
+  color: #545478;
+  opacity: 0.88;
+  line-height: 1.38;
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;         /* limit to 2 lines */
+  -webkit-box-orient: vertical;
+  margin-top: 0.1rem;
+}
+
+
+/* button */
+
+.buttons {
+  display: flex;
+  gap: 0.4rem;
+  margin-left: 1.1rem;
+}
+
+.message_button,
+.eye_button {
+  background: #f4f7ff;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  padding: 0.48rem 0.65rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(99, 91, 252, 0.09);
+}
+
+.message_button:hover,
+.eye_button:hover {
+  background: #e6ecff;
+}
+
+.message_icon,
+.eye_icon {
+  color: #635bfc;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .message_content {
+    padding: 1.1rem 0.5rem;
+  }
+  .connected_users {
+    max-width: 100%;
+  }
+  .connected_user .profile_picture {
+    width: 55px;
+    height: 55px;
+  }
+  .messages {
+    font-size: 1.4rem;
+  }
+  .message_icon,
+  .eye_icon {
+    width: 16px;
+    height: 16px;
+}
+}

@@ -5,6 +5,7 @@ import Stories from "../Components/Stories";
 import Post_card from "../Components/Post_card";
 
 import "../Css-Property/Feed.css";
+import Recent_messages from "../Components/Recent_messages";
 
 const Feed = () => {
   const [feeds, setFeeds] = useState([]);
@@ -55,7 +56,9 @@ const Feed = () => {
 </div>
 
         <div className="recent">
-          <h1>recent</h1>
+        
+            <Recent_messages />
+          
         </div>
       </div>
     </div>
